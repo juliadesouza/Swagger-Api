@@ -1,8 +1,8 @@
 # Mensagens log API
-INICIO_LOAD_MODEL = "Carregando o modelo..."
-FIM_LOAD_MODEL = "Modelo carregado."
-INICIO_PREDICT = "Iniciando a classificacao..."
-FIM_PREDICT = "Fim do predict."
+INICIO_LOAD_CALCULADORA= "Carregando a calculadora..."
+FIM_LOAD_CALCULADORA = "Calculadora carregado."
+INICIO_CALCULO = "Iniciando os calculos..."
+FIM_CALCULO = "Fim dos calculos."
 MODEL_DEVICE = "Modelo sendo inicializado em: "
 
 # Error Business #

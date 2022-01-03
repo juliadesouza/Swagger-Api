@@ -8,30 +8,28 @@ import numpy as np
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 
-class SentimentosService():
+class QuadraticEquation():
 
     def __init__(self):
-        logger.debug(mensagens.INICIO_LOAD_MODEL)
+        logger.debug(mensagens.INICIO_LOAD_CALCULADORA)
         self.load_model()
 
     def load_model(self):
         """"
-        Carrega o modelo VADER a ser usado
+        Carrega a calculadora a ser utilizada
         """
 
-        self.model = SentimentIntensityAnalyzer()
-
-        logger.debug(mensagens.FIM_LOAD_MODEL)
+        logger.debug(mensagens.FIM_LOAD_CALCULADORA)
 
     def executar_rest(self, texts):
         response = {}
 
-        logger.debug(mensagens.INICIO_PREDICT)
+        logger.debug(mensagens.INICIO_CALCULO)
         start_time = time.time()
 
-        response_predicts = self.buscar_predicao(texts['textoMensagem'])
+        response_predicts = self.calcular_equacao_quadratica(texts['textoMensagem'])
 
-        logger.debug(mensagens.FIM_PREDICT)
+        logger.debug(mensagens.FIM_CALCULO)
         logger.debug(f"Fim de todas as predições em {time.time()-start_time}")
 
         df_response = pd.DataFrame(texts, columns=['textoMensagem'])
@@ -45,11 +43,11 @@ class SentimentosService():
 
         return response
 
-    def buscar_predicao(self, texts):
+    def calcular_equacao_quadratica(self, texts):
         """
-        Pega o modelo carregado e aplica em texts
+        Resolve a equacao de segundo grau escrita em texts
         """
-        logger.debug('Iniciando o predict...')
+        logger.debug('Iniciando o calculo...')
 
         response = []
 
