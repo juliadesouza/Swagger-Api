@@ -5,9 +5,6 @@ from service.constants import mensagens
 import pandas as pd
 import numpy as np
 
-from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-
-
 class QuadraticEquation():
 
     def __init__(self):
@@ -54,9 +51,11 @@ class QuadraticEquation():
         for text in texts:
             a, b, c = text.split()
             equacao =  a + "xˆ2 + " + b + "x + " + c
+            
             a = float(a)
             b = float(b)
             c = float(c)
+            
             delta = (b**2 - 4*a*c)
             x1 = (-b + delta**(1/2)) / (2*a)
             x2 = (-b - delta**(1/2)) / (2*a)
