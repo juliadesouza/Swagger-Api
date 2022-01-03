@@ -16,5 +16,5 @@ ERROR_KEY = 'Chave incorreta'
 
 # Sucess Business #
 SUCESSO_GET = "Classificador OK."
-SUCESSO_PREDICT = "Classificacao realizada com sucesso."
+SUCESSO_PREDICT = "Calculo realizado com sucesso."
 SUCESSO_ENDPOINT = "Endpoints funcionando"

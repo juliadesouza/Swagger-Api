@@ -62,14 +62,5 @@ class QuadraticEquation():
             x2 = (-b - delta**(1/2)) / (2*a)
              
             response.append(equacao + " : " + "S = {" + str(x1) + ", " + str(x2) + "}")
-            # decide sentiment as positive, negative and neutral
-            # if sentiment_dict['compound'] >= 0.05:
-            #     response.append("Positive")
-        
-            # elif sentiment_dict['compound'] <= - 0.05:
-            #     response.append("Negative")
-        
-            # else:
-            #     response.append("Neutral")
-
+            
         return response
